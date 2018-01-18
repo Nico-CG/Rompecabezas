@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Rompecabezas</title>
+    <link rel="stylesheet" href="css/juego.css">
+    <link rel="stylesheet" href="js/sweetalert/sweetalert.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="js/sweetalert/sweetalert.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="col-40">
+
+      <div id="titulo">
+        <h1>Rompecabezas</h1>
+      </div>
+
+      <div id="instrucciones">
+        <h2>Instrucciones</h2>
+        <ul>
+          <li>Mover las piezas presionando las teclas de flechas o clickeando con el mouse</li>
+          <li>Encontrar el orden correcto de las piezas</li>
+        </ul>
+      </div>
+
+      <div id="configuracion">
+        <h2>Configuración</h2>
+        <div id="piezasPorLado" class="seccionConf">
+          <p>Cantidad de piezas por lado</p>
+          <input type="number" id="cantidadPiezasPorLado" min="2" max="6" value="3">
+        </div>
+        <div id="difucultades" class="seccionConf">
+          <p>Dificultad</p>
+          <label class="dificultad" for="facil">
+            <input type="radio" name="dificultad" id="facil">
+            <span class="checkmark"></span>
+            Fácil
+          </label>
+          <label class="dificultad" for="intermedio">
+            <input type="radio" name="dificultad" id="intermedio">
+            <span class="checkmark"></span>
+            Intermedio
+          </label>
+          <label class="dificultad" for="dificil">
+            <input type="radio" name="dificultad" id="dificil">
+            <span class="checkmark"></span>
+            Difícil
+          </label>
+        </div>
+      </div>
+
+      <div id="mezclar">
+        <button type="button" name="Mezclar" class="botonMezclar" onclick="Juego.seleccionarNivel()">Mezclar</button>
+      </div>
+
+      <div id="movimientosRestantes">
+        <h3>Movimientos Restantes</h3>
+        <h3><span id="contadorDeMovimientos"></span></h3>
+      </div>
+    </div>
+
+
+    <div class="col-60">
+      <div id="juego">
+        <canvas id="canvas" width="600" height="600"></canvas>
+      </div>
+    </div>
+
+
+    <footer class="autor">
+      <p>Autor: Nicolas Correa Galarza, Desarrollador Front End.</p>
+    </footer>
+
+    <script src="js/juego.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,164 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+    margin:0;
+    padding: 0;
+}
+
+body {
+  width: 940px;
+  margin: 5% auto;
+  min-height: 100%;
+  background-image: url(../images/fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.col-40 h1{
+  background-color: #e77878;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 25px;
+  text-align: center;
+  text-transform: uppercase;
+
+}
+.col-40 h2{
+  border-bottom: 1px solid #e77878;
+  color: #e77878;
+  font-weight: 500;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  padding-left: 5px;
+  padding-bottom: 5px;
+}
+.col-40 ul {
+  padding-left: 0;
+  list-style: none;
+}
+.col-40 li {
+  padding: 5px 0;
+}
+.col-40 li::before {
+  content: "• ";
+  color: #e77878;
+}
+
+.col-40, .col-60 {
+  display: table-cell;
+  margin: 0;
+  vertical-align: top;
+}
+.col-40 {
+  background: #3f4271;
+  color: #fff;
+  padding: 30px;
+}
+
+#configuracion p{
+  display: inline-block;
+}
+
+#configuracion input[type=number]{
+  background: none;
+  border: none;
+  color: #e77878;
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 10px;
+  width: 40px;
+}
+
+#configuracion input[type=radio]{
+    position: absolute;
+    opacity: 0;
+}
+
+.dificultad{
+  position: relative;
+padding-left: 20px;
+}
+.checkmark{
+  position: absolute;
+   top: 3px;
+   left: 0;
+   height: 18px;
+   width: 18px;
+   border: 2px solid #e77878;
+   border-radius: 50%;
+}
+
+.dificultad:hover input ~ .checkmark, input:checked ~ .checkmark {
+    background-color: #e77878;
+}
+
+.checkmark:after {
+  	background: white;
+    border-radius: 50%;
+    content: " ";
+    display: none;
+    top: 3px;
+	  left: 3px;
+	  width: 8px;
+	  height: 8px;
+    position: absolute;
+}
+
+.dificultad input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.seccionConf{
+  margin: 10px 0;
+}
+
+#mezclar{
+  margin-right: auto;
+  margin-left: auto;
+  width: 131px;
+}
+.botonMezclar{
+  background-color: #e77878;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px 0;
+  padding: 5px 30px;
+}
+
+#movimientosRestantes{
+  margin: 20px 0;
+}
+
+#movimientosRestantes h3{
+  display: inline;
+  font-size: 20px;
+  font-weight: 500;
+  float: left;
+  text-transform: uppercase;
+  width: 50%;
+}
+
+#contadorDeMovimientos{
+  color: #e77878;
+  font-size: 52px;
+  float: right;
+  margin-top: -15px;
+}
+
+#juego{
+  height: 600px;
+}
+
+#canvas{
+  background-color: #e77878;
+}
+
+.autor{
+  background-color: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  font-style: italic;
+  font-weight: bold;
+  padding: 10px 0;
+  text-align: center;
+}
